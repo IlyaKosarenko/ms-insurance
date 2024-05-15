@@ -1,9 +1,6 @@
 package com.university.msinsurance.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "type")
@@ -11,6 +8,8 @@ public class Type {
 
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "type_seq_gen")
+    @SequenceGenerator(name = "type_seq_gen", sequenceName = "type_id_seq", allocationSize = 1)
     private Long id;
 
     private String name;

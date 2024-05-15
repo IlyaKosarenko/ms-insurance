@@ -10,6 +10,8 @@ public class Insurance {
 
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "insurance_seq_gen")
+    @SequenceGenerator(name = "insurance_seq_gen", sequenceName = "insurance_id_seq", allocationSize = 1)
     private Long id;
 
     @Column(name = "email")
