@@ -1,6 +1,6 @@
 package com.university.msinsurance.service;
 
-import com.university.msinsurance.config.repository.InsuranceRepository;
+import com.university.msinsurance.repository.InsuranceRepository;
 import com.university.msinsurance.entity.Insurance;
 import com.university.msinsurance.response.InsuranceInfoResponse;
 import org.springframework.stereotype.Service;

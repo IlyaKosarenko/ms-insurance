@@ -1,3 +1,8 @@
+create schema insurance;
+
+alter schema insurance owner to postgres;
+
+
 create table if not exists insurance (
     id SERIAL PRIMARY KEY,
     email VARCHAR(100) NOT NULL,

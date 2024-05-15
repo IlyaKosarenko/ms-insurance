@@ -1,4 +1,4 @@
-package com.university.msinsurance.config.repository;
+package com.university.msinsurance.repository;
 
 import com.university.msinsurance.entity.Insurance;
 import org.springframework.data.jpa.repository.JpaRepository;
