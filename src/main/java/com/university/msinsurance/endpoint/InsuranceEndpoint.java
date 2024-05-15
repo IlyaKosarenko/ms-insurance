@@ -2,6 +2,7 @@ package com.university.msinsurance.endpoint;
 
 import com.university.msinsurance.response.InsuranceInfoResponse;
 import com.university.msinsurance.service.InsuranceService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,7 @@ public class InsuranceEndpoint {
 
 
     @GetMapping("/insurance")
+    @PreAuthorize("hasAuthority('CLIENT')")
     public List<InsuranceInfoResponse> getInsurances() {
         return insuranceService.getInsurances();
     }
